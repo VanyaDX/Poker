@@ -6,20 +6,6 @@ class Player {
 
 };
 
-class Stack {
-public:
-    Card makeCard() {
-        Card card(Card::D2, Card::Sprade);
-		return std::move(card);
-    }
-
-    Card makeCard(std::shared_ptr<Player> const & player) {
-        Card card(Card::D2, Card::Sprade);
-        card.setOwner(player);
-        return std::move(card);
-    }
-};
-
 BOOST_AUTO_TEST_SUITE(TestCard)
 
 BOOST_AUTO_TEST_CASE(CreateCard)

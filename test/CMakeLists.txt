@@ -3,6 +3,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(SOURCE_FILES
     main.cpp
 	TestCard.hpp
+	TestRules.hpp
 )
 
 add_executable(test_runner ${SOURCE_FILES})

@@ -16,7 +16,7 @@ Card & Card::operator =(Card && c) {
 	return *this;
 }
 
-std::pair<Card::Suit, Card::Value> Card::look(std::shared_ptr<Player> const & player) {
+std::pair<Card::Suit, Card::Value> Card::look(std::shared_ptr<Player> const & player) const {
 	if (isOpen || (owner && player == owner)) {
 		return std::make_pair(suit, value);
 	}

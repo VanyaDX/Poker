@@ -14,6 +14,7 @@ class Card {
 public:
     /// Possible card value enumeration
     enum Value {
+		NONE = 0x00,
         D2 = 0x02,
         D3,
         D4,
@@ -52,7 +53,7 @@ public:
     /**
     * \param player Player reference to check if actor can see card
     */
-    std::pair<Suit, Value> look(std::shared_ptr<Player> const & player); //throws InvalidAccess
+    std::pair<Suit, Value> look(std::shared_ptr<Player> const & player) const; //throws InvalidAccess
     /// Open card. This card become visible to all players forever
     void open(std::shared_ptr<Player> const & player);
 private:
